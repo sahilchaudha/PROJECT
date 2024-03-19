@@ -1,17 +1,17 @@
 {% extends "core/base.html" %}
 
 {% load static %}
-{% block title %}normal Categories{% endblock title %}
+{% block title %}gaming Categories{% endblock title %}
 
 {% block content %}
 
 <!-- normal Card-->
 <div class="container ">                         <!-- we have created new container class-->
     <div class="row">                           <!-- we have created row class-->
-        {% for cc in cat_category %}
+        {% for cc in gaming_category %}
         <div class="col-sm-4 ">
-          <a href="{% url "Laptopdetails" cc.id %}" style="text-decoration: none; ">        
-            <div class="card normal_categories_card normal_card" style="width: 18rem; height:20rem">
+          <a href="{% url "laptopdetails" cc.id %}" style="text-decoration: none; ">        
+            <div class="card gaming_categories_card gaming_card" style="width: 18rem; height:20rem">
                 <img class="card-img-top " src="{{cc.Laptop_image.url}}" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">{{cc.name}}</h5>
